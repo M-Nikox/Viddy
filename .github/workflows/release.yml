@@ -41,7 +41,7 @@ jobs:
           DIR_NAME="viddy-${TAG}"
           
           mkdir -p "${DIR_NAME}"
-          cp -r dist server.ts package.json package-lock.json tsconfig.json vite.config.ts run_portable.bat run_portable.sh README.md LICENSE .env.example public src "${DIR_NAME}/"
+          cp -r dist index.html server.ts package.json package-lock.json tsconfig.json vite.config.ts run_portable.bat run_portable.sh README.md LICENSE .env.example public src "${DIR_NAME}/"
           mkdir -p "${DIR_NAME}/media_storage"
           touch "${DIR_NAME}/media_storage/.gitkeep"
           
