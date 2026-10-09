@@ -1,17 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {
   X,
-  Lock,
   Smartphone,
   Tablet,
   Laptop,
   Copy,
   Check,
   RefreshCw,
-  FolderOpen,
-  AlertCircle,
   Shield,
-  Devices,
   Folder,
   Trash2,
 } from 'lucide-react';
@@ -44,7 +40,6 @@ export const ServerDashboardModal: React.FC<ServerDashboardModalProps> = ({
 
   // Storage / Folder State
   const [storagePath, setStoragePath] = useState('');
-  const [activeDrivePath, setActiveDrivePath] = useState('./media_storage');
   const [filesIndexed, setFilesIndexed] = useState(0);
   const [storageMessage, setStorageMessage] = useState<string | null>(null);
   const [storageError, setStorageError] = useState<string | null>(null);
@@ -73,7 +68,6 @@ export const ServerDashboardModal: React.FC<ServerDashboardModalProps> = ({
 
     try {
       const storage = await api.getStorageConfig();
-      setActiveDrivePath(storage.activeMediaDir);
       setFilesIndexed(storage.totalFilesIndexed);
       if (!storagePathRef.current) {
         setStoragePath(storage.activeMediaDir);
@@ -100,7 +94,6 @@ export const ServerDashboardModal: React.FC<ServerDashboardModalProps> = ({
     setIsUpdatingPath(false);
 
     if (res.success && res.activeMediaDir) {
-      setActiveDrivePath(res.activeMediaDir);
       setStoragePath(res.activeMediaDir);
       setFilesIndexed(res.totalFilesIndexed || 0);
       setStorageMessage(`Library path updated. Indexed ${res.totalFilesIndexed || 0} files.`);

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Lock, ArrowRight } from 'lucide-react';
 import { AppIcon } from './AppIcon';
 import { api } from '../services/api';
 
