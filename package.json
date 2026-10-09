@@ -1,0 +1,66 @@
+{
+  "name": "viddy",
+  "version": "1.0.0",
+  "description": "Ultra-lightweight, privacy-first LAN media server — stream videos, music, and photos to any device on your Wi-Fi network with zero external dependencies.",
+  "author": "M-Nikox (https://github.com/M-Nikox)",
+  "license": "GPL-3.0-only",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/M-Nikox/Viddy.git"
+  },
+  "homepage": "https://github.com/M-Nikox/Viddy#readme",
+  "bugs": {
+    "url": "https://github.com/M-Nikox/Viddy/issues"
+  },
+  "keywords": [
+    "media-server",
+    "lan-streaming",
+    "streaming",
+    "privacy-first",
+    "offline-first",
+    "self-hosted",
+    "portable",
+    "video",
+    "audio",
+    "react19",
+    "typescript",
+    "express"
+  ],
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "tsx --env-file-if-exists=.env server.ts",
+    "build": "vite build",
+    "start": "tsx --env-file-if-exists=.env server.ts --production",
+    "preview": "vite preview",
+    "clean": "rm -rf dist server.js",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "@fontsource/plus-jakarta-sans": "^5.3.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.2",
+    "express": "^5.2.1",
+    "lucide-react": "^1.52.0",
+    "multer": "^2.4.0",
+    "qrcode": "^1.5.4",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "vite": "^8.3.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/multer": "^2.3.0",
+    "@types/node": "^26.6.4",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.21.0",
+    "typescript": "^7.0.2"
+  }
+}
