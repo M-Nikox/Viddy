@@ -46,7 +46,7 @@
     "@vitejs/plugin-react": "^6.1.2",
     "express": "^5.2.1",
     "lucide-react": "^1.52.0",
-    "multer": "^2.4.0",
+    "multer": "^2.5.0",
     "qrcode": "^1.5.4",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
